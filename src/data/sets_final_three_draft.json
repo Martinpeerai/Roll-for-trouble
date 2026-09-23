@@ -1,0 +1,42 @@
+{
+  "status": "DRAFT",
+  "version": "0.0.1",
+  "sets": [
+    {
+      "SET_NAME": "Sturmrufer",
+      "SET_ID": "SET_STORMCALLER",
+      "TAG_1": "LIGHTNING",
+      "TAG_2": "MAGIC",
+      "TAG_3": "AOE",
+      "2_PARTS": "DAMAGE_LIGHTNING x1.15",
+      "3_PARTS": "DAMAGE_LIGHTNING x1.3",
+      "4_PARTS": "DAMAGE_LIGHTNING x1.5",
+      "5_PARTS": "DAMAGE_LIGHTNING x1.75",
+      "6_PARTS": "DAMAGE_LIGHTNING x1.75; LIGHTNING hits apply +2 STATUS_ELECTRIFIED"
+    },
+    {
+      "SET_NAME": "Barde",
+      "SET_ID": "SET_BARD",
+      "TAG_1": "SOUND",
+      "TAG_2": "AOE",
+      "TAG_3": "MAGIC",
+      "2_PARTS": "DAMAGE_SOUND x1.15",
+      "3_PARTS": "DAMAGE_SOUND x1.3",
+      "4_PARTS": "DAMAGE_SOUND x1.5",
+      "5_PARTS": "DAMAGE_SOUND x1.75",
+      "6_PARTS": "DAMAGE_SOUND x1.75; SOUND hits apply +1 STATUS_WEAKED"
+    },
+    {
+      "SET_NAME": "Nekromant",
+      "SET_ID": "SET_NECROMANCER",
+      "TAG_1": "UNDEAD",
+      "TAG_2": "DARKNESS",
+      "TAG_3": "MAGIC",
+      "2_PARTS": "DAMAGE_UNDEAD x1.15",
+      "3_PARTS": "DAMAGE_UNDEAD x1.3",
+      "4_PARTS": "DAMAGE_UNDEAD x1.5",
+      "5_PARTS": "DAMAGE_UNDEAD x1.75",
+      "6_PARTS": "DAMAGE_UNDEAD x1.75; UNDEAD hits apply +1 STATUS_CURSED"
+    }
+  ]
+}
