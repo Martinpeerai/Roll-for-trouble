@@ -1,0 +1,36 @@
+{
+  "status": "CANONICAL",
+  "version": "0.0.1",
+  "columns": [
+    "ITEM_NAME",
+    "ITEM_ID",
+    "ITEM_SLOT",
+    "ITEM_RARITY",
+    "SET_ID",
+    "TAG_1",
+    "TAG_2",
+    "TAG_3",
+    "WEAPON_TYPE",
+    "ATTACK_PATTERN",
+    "DAMAGE_TYPE_1",
+    "DAMAGE_VALUE_1",
+    "DAMAGE_TYPE_2",
+    "DAMAGE_VALUE_2",
+    "BASE_ITEM_ATTACK_SPEED",
+    "PROJECTILE_SPEED",
+    "BASE_ITEM_PROJECTILE_AMOUNT",
+    "STATUS_ID",
+    "STATUS_STACKS",
+    "STATUS_CHANCE",
+    "BASE_ITEM_AOE_SIZE",
+    "KNOCKBACK"
+  ],
+  "rules": [
+    "This is the complete canonical item schema for version 0.0.1.",
+    "Do not add extra item or weapon columns unless explicitly approved in a future chat.",
+    "Fields that are not relevant to an item remain empty/null.",
+    "Weapons may use up to two separate damage components through DAMAGE_TYPE_1/2 and DAMAGE_VALUE_1/2.",
+    "Status application is represented only by STATUS_ID, STATUS_STACKS and STATUS_CHANCE.",
+    "Weapon attack behavior is represented only by WEAPON_TYPE, ATTACK_PATTERN, BASE_ITEM_ATTACK_SPEED, PROJECTILE_SPEED, BASE_ITEM_PROJECTILE_AMOUNT, BASE_ITEM_AOE_SIZE and KNOCKBACK."
+  ]
+}
