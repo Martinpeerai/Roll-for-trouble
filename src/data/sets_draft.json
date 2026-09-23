@@ -1,0 +1,66 @@
+{
+  "status": "DRAFT",
+  "version": "0.0.1",
+  "sets": [
+    {
+      "SET_NAME": "Dorfprügler",
+      "SET_ID": "SET_VILLAGE_BRAWLER",
+      "TAG_1": "MELEE",
+      "TAG_2": "DAMAGE",
+      "TAG_3": "HEALTH",
+      "2_PARTS": "BASE_DAMAGE_MELEE +0.5",
+      "3_PARTS": "BASE_MAX_HEALTH +2",
+      "4_PARTS": "BASE_ATTACK_SPEED +0.1",
+      "5_PARTS": "BASE_DAMAGE_MELEE +1",
+      "6_PARTS": "BASE_CRIT_CHANCE +10"
+    },
+    {
+      "SET_NAME": "Waldläufer",
+      "SET_ID": "SET_RANGER",
+      "TAG_1": "DISTANCE",
+      "TAG_2": "RANGE",
+      "TAG_3": "PROJEKTILE",
+      "2_PARTS": "BASE_DISTANCE_RANGE +5",
+      "3_PARTS": "BASE_DAMAGE_DISTANCE +0.5",
+      "4_PARTS": "BASE_ATTACK_SPEED +0.1",
+      "5_PARTS": "BASE_CRIT_CHANCE +10",
+      "6_PARTS": "BASE_DISTANCE_PROJEKTILE +1"
+    },
+    {
+      "SET_NAME": "Zauberlehrling",
+      "SET_ID": "SET_APPRENTICE",
+      "TAG_1": "MAGIC",
+      "TAG_2": "AOE",
+      "TAG_3": "DAMAGE",
+      "2_PARTS": "BASE_DAMAGE_MAGIC +0.5",
+      "3_PARTS": "BASE_AOE_SIZE +1",
+      "4_PARTS": "BASE_CRIT_CHANCE +5",
+      "5_PARTS": "BASE_DAMAGE_MAGIC +1",
+      "6_PARTS": "BASE_CRIT_MULTIPLYER +0.5"
+    },
+    {
+      "SET_NAME": "Glücksritter",
+      "SET_ID": "SET_FORTUNE_SEEKER",
+      "TAG_1": "LUCK",
+      "TAG_2": "GOLD",
+      "TAG_3": "ECONOMY",
+      "2_PARTS": "BASE_GOLD_MULTIPLYER +0.1",
+      "3_PARTS": "BASE_BASE_LUCK +0.5",
+      "4_PARTS": "BASE_XP_MULTIPLYER +0.1",
+      "5_PARTS": "BASE_GOLD_MULTIPLYER +0.25",
+      "6_PARTS": "BASE_BASE_LUCK +1"
+    },
+    {
+      "SET_NAME": "Flickwerk",
+      "SET_ID": "SET_PATCHWORK",
+      "TAG_1": "DEFENSE",
+      "TAG_2": "ARMOR",
+      "TAG_3": "HEALTH",
+      "2_PARTS": "BASE_ARMOR +5",
+      "3_PARTS": "BASE_MAX_HEALTH +2",
+      "4_PARTS": "DAMAGE_RESISTANCE_MELEE +5",
+      "5_PARTS": "DAMAGE_RESISTANCE_DISTANCE +5",
+      "6_PARTS": "DAMAGE_RESISTANCE_MAGIC +5"
+    }
+  ]
+}
