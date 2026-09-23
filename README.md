@@ -38,6 +38,15 @@ Kein automatischer Sprung auf `0.1.0`.
 - mehrere getrennte Schadensarten und passende Resistenzen
 - Status- und Umweltinteraktionen
 
+## Kanonischer Stand 0.0.1
+
+Die aktuell verbindlichen Regeln und Daten liegen hier:
+
+- `docs/RULES_0.0.1.md` — Schadens-, Defense-, Status- und Level-Up-Formeln
+- `src/data/characters.json` — finale Level-1-Basiswerte der sieben Charaktere
+- `src/data/statuses.json` — finale Statusdefinitionen, Stackregeln und Kombinationen
+- `src/data/level_up_rewards.json` — finaler Level-Up-Reward-Pool sowie Rarity-, Tag- und Luck-Gewichtung
+
 ## Repository-Regel
 
-Dieses Repository ist die zentrale technische Quelle für Code und die jeweils aktuell bestätigten Regeln. Neue Regeln werden erst übernommen, wenn sie im aktuellen oder einem zukünftigen Chat festgelegt wurden.
+Dieses Repository ist die zentrale technische Quelle für Code und die jeweils aktuell bestätigten Regeln. Neue Regeln werden nach der Festlegung im aktuellen oder einem zukünftigen Chat ins Repository übernommen.
