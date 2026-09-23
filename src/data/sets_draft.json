@@ -98,6 +98,66 @@
       "4_PARTS": "BASE_ARMOR +15",
       "5_PARTS": "BASE_ARMOR +20",
       "6_PARTS": "BASE_ARMOR +20; BASE_BLOCK_CHANGE +5"
+    },
+    {
+      "SET_NAME": "Schmied",
+      "SET_ID": "SET_BLACKSMITH",
+      "TAG_1": "ARMOR",
+      "TAG_2": "MELEE",
+      "TAG_3": "DEFENSE",
+      "2_PARTS": "BASE_ARMOR +10",
+      "3_PARTS": "BASE_ARMOR +20",
+      "4_PARTS": "BASE_ARMOR +30",
+      "5_PARTS": "BASE_ARMOR +40",
+      "6_PARTS": "BASE_ARMOR +40; for every 20 current ARMOR gain BASE_DAMAGE_MELEE +0.25"
+    },
+    {
+      "SET_NAME": "Barbar",
+      "SET_ID": "SET_BARBARIAN",
+      "TAG_1": "MELEE",
+      "TAG_2": "DAMAGE",
+      "TAG_3": "HEALTH",
+      "2_PARTS": "BASE_DAMAGE_MELEE +1",
+      "3_PARTS": "BASE_DAMAGE_MELEE +2",
+      "4_PARTS": "BASE_DAMAGE_MELEE +3",
+      "5_PARTS": "BASE_DAMAGE_MELEE +4",
+      "6_PARTS": "BASE_DAMAGE_MELEE +4; while HEALTH <= 50% BASE_ATTACK_SPEED x1.5"
+    },
+    {
+      "SET_NAME": "Zwerg",
+      "SET_ID": "SET_DWARF",
+      "TAG_1": "HEALTH",
+      "TAG_2": "BLOCK",
+      "TAG_3": "DEFENSE",
+      "2_PARTS": "BASE_MAX_HEALTH +5",
+      "3_PARTS": "BASE_MAX_HEALTH +10",
+      "4_PARTS": "BASE_MAX_HEALTH +15",
+      "5_PARTS": "BASE_MAX_HEALTH +20",
+      "6_PARTS": "BASE_MAX_HEALTH +20; BASE_BLOCK_CHANGE +10"
+    },
+    {
+      "SET_NAME": "Assassine",
+      "SET_ID": "SET_ASSASSIN",
+      "TAG_1": "CRIT",
+      "TAG_2": "DODGE",
+      "TAG_3": "DAMAGE",
+      "2_PARTS": "BASE_CRIT_MULTIPLYER +0.25",
+      "3_PARTS": "BASE_CRIT_MULTIPLYER +0.5",
+      "4_PARTS": "BASE_CRIT_MULTIPLYER +0.75",
+      "5_PARTS": "BASE_CRIT_MULTIPLYER +1",
+      "6_PARTS": "BASE_CRIT_MULTIPLYER +1; BASE_DODGE_CHANGE +10"
+    },
+    {
+      "SET_NAME": "Hexenmeister",
+      "SET_ID": "SET_WARLOCK",
+      "TAG_1": "DARKNESS",
+      "TAG_2": "MAGIC",
+      "TAG_3": "DAMAGE",
+      "2_PARTS": "DAMAGE_DARKNESS x1.15",
+      "3_PARTS": "DAMAGE_DARKNESS x1.3",
+      "4_PARTS": "DAMAGE_DARKNESS x1.5",
+      "5_PARTS": "DAMAGE_DARKNESS x1.75",
+      "6_PARTS": "DAMAGE_DARKNESS x1.75; MAGIC hits apply +1 STATUS_CURSED"
     }
   ]
 }
