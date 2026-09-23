@@ -169,6 +169,66 @@
       "4_PARTS": "BASE_DAMAGE_MAGIC +2",
       "5_PARTS": "BASE_DAMAGE_MAGIC +3",
       "6_PARTS": "BASE_DAMAGE_MAGIC +3; successful DODGE applies +1 STATUS_CONCENTRATED to self"
+    },
+    {
+      "SET_NAME": "Koch",
+      "SET_ID": "SET_COOK",
+      "TAG_1": "HEALTH",
+      "TAG_2": "XP",
+      "TAG_3": "LUCK",
+      "2_PARTS": "BASE_MAX_HEALTH +3",
+      "3_PARTS": "BASE_MAX_HEALTH +6",
+      "4_PARTS": "BASE_MAX_HEALTH +10",
+      "5_PARTS": "BASE_MAX_HEALTH +15",
+      "6_PARTS": "BASE_MAX_HEALTH +15; OnWaveEnd heals 5 HEALTH"
+    },
+    {
+      "SET_NAME": "Hexe",
+      "SET_ID": "SET_WITCH",
+      "TAG_1": "DARKNESS",
+      "TAG_2": "MAGIC",
+      "TAG_3": "DAMAGE",
+      "2_PARTS": "OnHit: 10% chance to apply +1 STATUS_CURSED",
+      "3_PARTS": "OnHit: 20% chance to apply +1 STATUS_CURSED",
+      "4_PARTS": "OnHit: 30% chance to apply +1 STATUS_CURSED",
+      "5_PARTS": "OnHit: 40% chance to apply +1 STATUS_CURSED",
+      "6_PARTS": "OnHit: 40% chance to apply +2 STATUS_CURSED"
+    },
+    {
+      "SET_NAME": "Tänzer",
+      "SET_ID": "SET_DANCER",
+      "TAG_1": "SPEED",
+      "TAG_2": "DODGE",
+      "TAG_3": "ATTACK_SPEED",
+      "2_PARTS": "BASE_MOVE_SPEED +5",
+      "3_PARTS": "BASE_MOVE_SPEED +10",
+      "4_PARTS": "BASE_MOVE_SPEED +15",
+      "5_PARTS": "BASE_MOVE_SPEED +20",
+      "6_PARTS": "BASE_MOVE_SPEED +20; BASE_ATTACK_SPEED +0.25"
+    },
+    {
+      "SET_NAME": "Eiskönigin",
+      "SET_ID": "SET_ICE_QUEEN",
+      "TAG_1": "ICE",
+      "TAG_2": "AOE",
+      "TAG_3": "MAGIC",
+      "2_PARTS": "DAMAGE_ICE x1.15",
+      "3_PARTS": "DAMAGE_ICE x1.3",
+      "4_PARTS": "DAMAGE_ICE x1.5",
+      "5_PARTS": "DAMAGE_ICE x1.75",
+      "6_PARTS": "DAMAGE_ICE x1.75; ICE hits apply +2 STATUS_FROZEN"
+    },
+    {
+      "SET_NAME": "Dunkler Priester",
+      "SET_ID": "SET_DARK_PRIEST",
+      "TAG_1": "DARKNESS",
+      "TAG_2": "MAGIC",
+      "TAG_3": "LIFESTEAL",
+      "2_PARTS": "DAMAGE_DARKNESS x1.15",
+      "3_PARTS": "DAMAGE_DARKNESS x1.3",
+      "4_PARTS": "DAMAGE_DARKNESS x1.5",
+      "5_PARTS": "DAMAGE_DARKNESS x1.75",
+      "6_PARTS": "DAMAGE_DARKNESS x1.75; killing a target with STATUS_CURSED heals 1 HEALTH"
     }
   ]
 }
