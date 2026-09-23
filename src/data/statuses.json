@@ -1,0 +1,172 @@
+{
+  "tickIntervalSeconds": 1,
+  "stackRule": "newStacks = min(currentStacks + addedStacks, STACK_MAX)",
+  "tickOrder": [
+    "read current stack counts",
+    "calculate tick damage and multipliers",
+    "apply static status effects",
+    "roll status side effects",
+    "apply damage",
+    "remove 1 stack from every already active status",
+    "remove statuses at 0 stacks"
+  ],
+  "statuses": [
+    {
+      "STATUS_NAME": "Vergiftet",
+      "STATUS_ID": "STATUS_POISONED",
+      "TICK_INTERVAL": 1,
+      "STACK_MAX": 50,
+      "STACK_EFFECT_PER_TICK": "DAMAGE_EARTH = 1 × STACK_AMOUNT_POISON",
+      "STATUS_EFFECT": "-"
+    },
+    {
+      "STATUS_NAME": "Brennend",
+      "STATUS_ID": "STATUS_BURNING",
+      "TICK_INTERVAL": 1,
+      "STACK_MAX": 50,
+      "STACK_EFFECT_PER_TICK": "DAMAGE_FIRE = STACK_AMOUNT_FIRE × 1.5",
+      "STATUS_EFFECT": "-"
+    },
+    {
+      "STATUS_NAME": "Elektrifiziert",
+      "STATUS_ID": "STATUS_ELECTRIFIED",
+      "TICK_INTERVAL": 1,
+      "STACK_MAX": 50,
+      "STACK_EFFECT_PER_TICK": "DAMAGE_LIGHTNING = max(1, 0.5 × STACK_AMOUNT_ELECTRIFIED × STACK_AMOUNT_WET)",
+      "STATUS_EFFECT": "Every tick: 50% chance to add 1 STATUS_PARALISED stack"
+    },
+    {
+      "STATUS_NAME": "Gefrohren",
+      "STATUS_ID": "STATUS_FROZEN",
+      "TICK_INTERVAL": 1,
+      "STACK_MAX": 50,
+      "STACK_EFFECT_PER_TICK": "DAMAGE_ICE = STACK_AMOUNT_FROZEN × 0.1",
+      "STATUS_EFFECT": "PLAYER_MOVE_SPEED = 0; incoming DAMAGE_MELEE ×2; incoming DAMAGE_DISTANCE ×2"
+    },
+    {
+      "STATUS_NAME": "Blutend",
+      "STATUS_ID": "STATUS_BLEEDING",
+      "TICK_INTERVAL": 1,
+      "STACK_MAX": 50,
+      "STACK_EFFECT_PER_TICK": "DAMAGE_BLOOD = 2 × STACK_AMOUNT_BLEEDING",
+      "STATUS_EFFECT": "-"
+    },
+    {
+      "STATUS_NAME": "Verflucht",
+      "STATUS_ID": "STATUS_CURSED",
+      "TICK_INTERVAL": 1,
+      "STACK_MAX": 100,
+      "STACK_EFFECT_PER_TICK": "DAMAGE_DARKNESS = STACK_AMOUNT_CURSE × TOTAL_STACK_AMOUNT",
+      "STATUS_EFFECT": "PLAYER_RANGE_MELEE = 1; PLAYER_RANGE_DISTANCE = 1",
+      "TOTAL_STACK_AMOUNT_RULE": "Sum of all currently active status stacks on the target, including CURSED stacks themselves, evaluated before stack removal"
+    },
+    {
+      "STATUS_NAME": "Paralysiert",
+      "STATUS_ID": "STATUS_PARALISED",
+      "TICK_INTERVAL": 1,
+      "STACK_MAX": 10,
+      "STACK_EFFECT_PER_TICK": "-",
+      "STATUS_EFFECT": "PLAYER_MOVE_SPEED ×0.5"
+    },
+    {
+      "STATUS_NAME": "Geschwächt",
+      "STATUS_ID": "STATUS_WEAKED",
+      "TICK_INTERVAL": 1,
+      "STACK_MAX": 50,
+      "STACK_EFFECT_PER_TICK": "WEAKED_MULTIPLIER = 1 / (1 + STACK_AMOUNT_WEAKED × 0.1)",
+      "STATUS_EFFECT": "DAMAGE_DEALT = DAMAGE_DEALT × WEAKED_MULTIPLIER"
+    },
+    {
+      "STATUS_NAME": "Gestärkt",
+      "STATUS_ID": "STATUS_STRENGTHENED",
+      "TICK_INTERVAL": 1,
+      "STACK_MAX": 5,
+      "STACK_EFFECT_PER_TICK": "STRENGTHENED_MULTIPLIER = 1 + STACK_AMOUNT_STRENGTHENED × 0.2",
+      "STATUS_EFFECT": "DAMAGE_DEALT = DAMAGE_DEALT × STRENGTHENED_MULTIPLIER"
+    },
+    {
+      "STATUS_NAME": "Gestachelt",
+      "STATUS_ID": "STATUS_SPIKED",
+      "TICK_INTERVAL": 1,
+      "STACK_MAX": 5,
+      "STACK_EFFECT_PER_TICK": "STACK_SPIKED_VALUE = STACK_AMOUNT_SPIKED × 0.6",
+      "STATUS_EFFECT": "Every successful incoming DAMAGE_MELEE hit that deals damage returns STACK_SPIKED_VALUE as DAMAGE_MELEE to the attacker"
+    },
+    {
+      "STATUS_NAME": "Nass",
+      "STATUS_ID": "STATUS_WET",
+      "TICK_INTERVAL": 1,
+      "STACK_MAX": 10,
+      "STACK_EFFECT_PER_TICK": "-",
+      "STATUS_EFFECT": "DAMAGE_RESISTANCE_LIGHTNING += STACK_AMOUNT_WET × -1; DAMAGE_RESISTANCE_FIRE += STACK_AMOUNT_WET × 1"
+    },
+    {
+      "STATUS_NAME": "Verwurzelt",
+      "STATUS_ID": "STATUS_ROOTED",
+      "TICK_INTERVAL": 1,
+      "STACK_MAX": 5,
+      "STACK_EFFECT_PER_TICK": "-",
+      "STATUS_EFFECT": "PLAYER_MOVE_SPEED = 0"
+    },
+    {
+      "STATUS_NAME": "Beschleunigt",
+      "STATUS_ID": "STATUS_HASTED",
+      "TICK_INTERVAL": 1,
+      "STACK_MAX": 10,
+      "STACK_EFFECT_PER_TICK": "-",
+      "STATUS_EFFECT": "PLAYER_MOVE_SPEED ×2"
+    },
+    {
+      "STATUS_NAME": "Verlangsamt",
+      "STATUS_ID": "STATUS_SLOWED",
+      "TICK_INTERVAL": 1,
+      "STACK_MAX": 10,
+      "STACK_EFFECT_PER_TICK": "-",
+      "STATUS_EFFECT": "PLAYER_MOVE_SPEED ×0.5"
+    },
+    {
+      "STATUS_NAME": "Verletzlich",
+      "STATUS_ID": "STATUS_VULNERABLE",
+      "TICK_INTERVAL": 1,
+      "STACK_MAX": 5,
+      "STACK_EFFECT_PER_TICK": "VULNERABLE_MULTIPLIER = 1 + STACK_AMOUNT_VULNERABLE × 0.2",
+      "STATUS_EFFECT": "DAMAGE_INCOMING = DAMAGE_INCOMING × VULNERABLE_MULTIPLIER"
+    },
+    {
+      "STATUS_NAME": "Verhärtet",
+      "STATUS_ID": "STATUS_HARDENED",
+      "TICK_INTERVAL": 1,
+      "STACK_MAX": 5,
+      "STACK_EFFECT_PER_TICK": "HARDENED_MULTIPLIER = 1 / (1 + STACK_AMOUNT_HARDENED × 0.2)",
+      "STATUS_EFFECT": "DAMAGE_INCOMING = DAMAGE_INCOMING × HARDENED_MULTIPLIER"
+    },
+    {
+      "STATUS_NAME": "Körperlos",
+      "STATUS_ID": "STATUS_SPIRITISED",
+      "TICK_INTERVAL": 1,
+      "STACK_MAX": 20,
+      "STACK_EFFECT_PER_TICK": "-",
+      "STATUS_EFFECT": "incoming DAMAGE_MAGIC ×1.2; no collision"
+    },
+    {
+      "STATUS_NAME": "Konzentriert",
+      "STATUS_ID": "STATUS_CONCENTRATED",
+      "TICK_INTERVAL": 1,
+      "STACK_MAX": 5,
+      "STACK_EFFECT_PER_TICK": "-",
+      "STATUS_EFFECT": "dealt DAMAGE_MAGIC ×2"
+    }
+  ],
+  "combinationRules": [
+    "Multiplicative effects multiply together",
+    "ROOTED or FROZEN hard-overrides move speed to 0",
+    "HASTED ×2 and SLOWED ×0.5 cancel each other",
+    "WEAKED and STRENGTHENED may coexist and multiply",
+    "VULNERABLE and HARDENED may coexist and multiply",
+    "CURSED range overrides ignore range bonuses while active",
+    "BURNING and WET coexist; WET reduces fire damage only through its Fire Resistance modifier",
+    "BURNING and FROZEN have no special interaction",
+    "FROZEN and WET have no special interaction",
+    "ELECTRIFIED uses WET stacks in its damage formula"
+  ]
+}
