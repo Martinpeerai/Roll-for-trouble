@@ -158,6 +158,54 @@
       "4_PARTS": "DAMAGE_DARKNESS x1.5",
       "5_PARTS": "DAMAGE_DARKNESS x1.75",
       "6_PARTS": "DAMAGE_DARKNESS x1.75; MAGIC hits apply +1 STATUS_CURSED"
+    },
+    {
+      "SET_NAME": "Dämonenjäger",
+      "SET_ID": "SET_DEMON_HUNTER",
+      "TAG_1": "CRIT",
+      "TAG_2": "FIRE",
+      "TAG_3": "DAMAGE",
+      "2_PARTS": "BASE_CRIT_CHANCE +10",
+      "3_PARTS": "BASE_CRIT_CHANCE +15",
+      "4_PARTS": "BASE_CRIT_CHANCE +20",
+      "5_PARTS": "BASE_CRIT_CHANCE +30",
+      "6_PARTS": "BASE_CRIT_CHANCE +30; CRIT hits apply +2 STATUS_BURNING"
+    },
+    {
+      "SET_NAME": "Erzmagier",
+      "SET_ID": "SET_ARCHMAGE",
+      "TAG_1": "MAGIC",
+      "TAG_2": "AOE",
+      "TAG_3": "DAMAGE",
+      "2_PARTS": "BASE_DAMAGE_MAGIC +1",
+      "3_PARTS": "BASE_DAMAGE_MAGIC +2",
+      "4_PARTS": "BASE_DAMAGE_MAGIC +3",
+      "5_PARTS": "BASE_DAMAGE_MAGIC +4",
+      "6_PARTS": "BASE_DAMAGE_MAGIC +4; BASE_AOE_SIZE +5"
+    },
+    {
+      "SET_NAME": "Heiliger Krieger",
+      "SET_ID": "SET_HOLY_WARRIOR",
+      "TAG_1": "BLOCK",
+      "TAG_2": "DEFENSE",
+      "TAG_3": "MELEE",
+      "2_PARTS": "BASE_BLOCK_CHANGE +10",
+      "3_PARTS": "BASE_BLOCK_CHANGE +20",
+      "4_PARTS": "BASE_BLOCK_CHANGE +30",
+      "5_PARTS": "BASE_BLOCK_CHANGE +40",
+      "6_PARTS": "BASE_BLOCK_CHANGE +40; successful BLOCK heals 1 HEALTH"
+    },
+    {
+      "SET_NAME": "Schatten",
+      "SET_ID": "SET_SHADOW",
+      "TAG_1": "DODGE",
+      "TAG_2": "DARKNESS",
+      "TAG_3": "MOBILITY",
+      "2_PARTS": "BASE_DODGE_CHANGE +10",
+      "3_PARTS": "BASE_DODGE_CHANGE +20",
+      "4_PARTS": "BASE_DODGE_CHANGE +30",
+      "5_PARTS": "BASE_DODGE_CHANGE +40",
+      "6_PARTS": "BASE_DODGE_CHANGE +40; successful DODGE applies +1 STATUS_HASTED to self"
     }
   ]
 }
