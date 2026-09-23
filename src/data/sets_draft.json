@@ -1,6 +1,7 @@
 {
   "status": "DRAFT",
   "version": "0.0.1",
+  "rule": "Only the highest reached set tier is active. Each higher tier must be a stronger continuation of the same build direction and therefore contains the full active bonus for that tier.",
   "sets": [
     {
       "SET_NAME": "Dorfprügler",
@@ -9,10 +10,10 @@
       "TAG_2": "DAMAGE",
       "TAG_3": "HEALTH",
       "2_PARTS": "BASE_DAMAGE_MELEE +0.5",
-      "3_PARTS": "BASE_MAX_HEALTH +2",
-      "4_PARTS": "BASE_ATTACK_SPEED +0.1",
-      "5_PARTS": "BASE_DAMAGE_MELEE +1",
-      "6_PARTS": "BASE_CRIT_CHANCE +10"
+      "3_PARTS": "BASE_DAMAGE_MELEE +1",
+      "4_PARTS": "BASE_DAMAGE_MELEE +3",
+      "5_PARTS": "BASE_DAMAGE_MELEE +5",
+      "6_PARTS": "BASE_DAMAGE_MELEE +5; BASE_DODGE_CHANGE +5"
     },
     {
       "SET_NAME": "Waldläufer",
@@ -20,11 +21,11 @@
       "TAG_1": "DISTANCE",
       "TAG_2": "RANGE",
       "TAG_3": "PROJEKTILE",
-      "2_PARTS": "BASE_DISTANCE_RANGE +5",
-      "3_PARTS": "BASE_DAMAGE_DISTANCE +0.5",
-      "4_PARTS": "BASE_ATTACK_SPEED +0.1",
-      "5_PARTS": "BASE_CRIT_CHANCE +10",
-      "6_PARTS": "BASE_DISTANCE_PROJEKTILE +1"
+      "2_PARTS": "BASE_DAMAGE_DISTANCE +0.5",
+      "3_PARTS": "BASE_DAMAGE_DISTANCE +1",
+      "4_PARTS": "BASE_DAMAGE_DISTANCE +2",
+      "5_PARTS": "BASE_DAMAGE_DISTANCE +3",
+      "6_PARTS": "BASE_DAMAGE_DISTANCE +3; BASE_DISTANCE_PROJEKTILE +1"
     },
     {
       "SET_NAME": "Zauberlehrling",
@@ -33,10 +34,10 @@
       "TAG_2": "AOE",
       "TAG_3": "DAMAGE",
       "2_PARTS": "BASE_DAMAGE_MAGIC +0.5",
-      "3_PARTS": "BASE_AOE_SIZE +1",
-      "4_PARTS": "BASE_CRIT_CHANCE +5",
-      "5_PARTS": "BASE_DAMAGE_MAGIC +1",
-      "6_PARTS": "BASE_CRIT_MULTIPLYER +0.5"
+      "3_PARTS": "BASE_DAMAGE_MAGIC +1",
+      "4_PARTS": "BASE_DAMAGE_MAGIC +2",
+      "5_PARTS": "BASE_DAMAGE_MAGIC +3",
+      "6_PARTS": "BASE_DAMAGE_MAGIC +3; BASE_AOE_SIZE +1"
     },
     {
       "SET_NAME": "Glücksritter",
@@ -45,10 +46,10 @@
       "TAG_2": "GOLD",
       "TAG_3": "ECONOMY",
       "2_PARTS": "BASE_GOLD_MULTIPLYER +0.1",
-      "3_PARTS": "BASE_BASE_LUCK +0.5",
-      "4_PARTS": "BASE_XP_MULTIPLYER +0.1",
-      "5_PARTS": "BASE_GOLD_MULTIPLYER +0.25",
-      "6_PARTS": "BASE_BASE_LUCK +1"
+      "3_PARTS": "BASE_GOLD_MULTIPLYER +0.25",
+      "4_PARTS": "BASE_GOLD_MULTIPLYER +0.5",
+      "5_PARTS": "BASE_GOLD_MULTIPLYER +0.75",
+      "6_PARTS": "BASE_GOLD_MULTIPLYER +0.75; BASE_BASE_LUCK +1"
     },
     {
       "SET_NAME": "Flickwerk",
@@ -57,10 +58,10 @@
       "TAG_2": "ARMOR",
       "TAG_3": "HEALTH",
       "2_PARTS": "BASE_ARMOR +5",
-      "3_PARTS": "BASE_MAX_HEALTH +2",
-      "4_PARTS": "DAMAGE_RESISTANCE_MELEE +5",
-      "5_PARTS": "DAMAGE_RESISTANCE_DISTANCE +5",
-      "6_PARTS": "DAMAGE_RESISTANCE_MAGIC +5"
+      "3_PARTS": "BASE_ARMOR +10",
+      "4_PARTS": "BASE_ARMOR +15",
+      "5_PARTS": "BASE_ARMOR +20",
+      "6_PARTS": "BASE_ARMOR +20; BASE_BLOCK_CHANGE +5"
     }
   ]
 }
