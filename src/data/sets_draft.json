@@ -4,6 +4,42 @@
   "rule": "Only the highest reached set tier is active. Each higher tier must be a stronger continuation of the same build direction and therefore contains the full active bonus for that tier.",
   "sets": [
     {
+      "SET_NAME": "Brandstifter",
+      "SET_ID": "SET_ARSONIST",
+      "TAG_1": "FIRE",
+      "TAG_2": "DAMAGE",
+      "TAG_3": "AOE",
+      "2_PARTS": "DAMAGE_FIRE x1.1",
+      "3_PARTS": "DAMAGE_FIRE x1.2",
+      "4_PARTS": "DAMAGE_FIRE x1.3",
+      "5_PARTS": "DAMAGE_FIRE x1.5",
+      "6_PARTS": "DAMAGE_FIRE x1.5; FIRE hits apply +2 STATUS_BURNING"
+    },
+    {
+      "SET_NAME": "Bollwerk",
+      "SET_ID": "SET_BULWARK",
+      "TAG_1": "DEFENSE",
+      "TAG_2": "ARMOR",
+      "TAG_3": "BLOCK",
+      "2_PARTS": "BASE_BLOCK_CHANGE +5",
+      "3_PARTS": "BASE_BLOCK_CHANGE +10",
+      "4_PARTS": "BASE_BLOCK_CHANGE +15",
+      "5_PARTS": "BASE_BLOCK_CHANGE +20",
+      "6_PARTS": "BASE_BLOCK_CHANGE +20; successful BLOCK applies +1 STATUS_HARDENED to self"
+    },
+    {
+      "SET_NAME": "Adlerauge",
+      "SET_ID": "SET_EAGLE_EYE",
+      "TAG_1": "DISTANCE",
+      "TAG_2": "CRIT",
+      "TAG_3": "RANGE",
+      "2_PARTS": "BASE_CRIT_CHANCE +5",
+      "3_PARTS": "BASE_CRIT_CHANCE +10",
+      "4_PARTS": "BASE_CRIT_CHANCE +15",
+      "5_PARTS": "BASE_CRIT_CHANCE +20",
+      "6_PARTS": "BASE_CRIT_CHANCE +20; BASE_DISTANCE_PROJEKTILE +1"
+    },
+    {
       "SET_NAME": "Dorfprügler",
       "SET_ID": "SET_VILLAGE_BRAWLER",
       "TAG_1": "MELEE",
