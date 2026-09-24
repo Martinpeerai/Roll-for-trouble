@@ -20,15 +20,16 @@
     "BEHAVIOR",
     "ATTACK_STYLE",
     "ATTACK_STATUS",
+    "STATUS_CHANCE",
     "ATTACK_STATUS_STACK",
     "BASE_HITPOINTS",
     "BASE_ARMOR",
     "BASE_DAMAGE",
+    "DAMAGE_TYPE",
     "BASE_ATTACK_SPEED",
     "SPECIAL_ATTACK",
-    "WEAKNESS",
+    "STATUS_ID",
     "RESISTANCE",
-    "IMMUNITY",
     "SPRITE_NAME",
     "ATTACK_SPRITE_NAME",
     "SOUND_NAME",
@@ -36,13 +37,17 @@
     "GOLD_VALUE",
     "GOLD_DROP_CHANCE",
     "ITEM_DROP_CHANCE",
-    "SOUND",
+    "SOUND_DEATH_NAME",
     "EFFEKT"
   ],
   "spawn_rule": "Enemies spawn only from matching map locations/anchors defined by SPAWN_LOCATION_1/2/3. Examples: skeletons and zombies at graves/coffins; humans at houses or other suitable human structures.",
   "notes": [
     "Schema stored exactly as supplied by the user.",
-    "Open technical questions: how attack damage type is represented, whether ATTACK_STATUS always applies or needs a chance field, how WAVE is interpreted, and the exact semantics of WEAKNESS/RESISTANCE/IMMUNITY.",
-    "SOUND_NAME and SOUND are both retained because both were supplied and their distinction has not yet been defined."
+    "WAVE is intended to represent the first wave from which the mob can enter the spawn pool unless a later rule overrides this.",
+    "BASE_DAMAGE together with DAMAGE_TYPE defines the normal attack's base damage component.",
+    "ATTACK_STATUS, STATUS_CHANCE and ATTACK_STATUS_STACK define status application by the normal attack.",
+    "STATUS_ID is currently reserved for status data associated with SPECIAL_ATTACK so it does not duplicate ATTACK_STATUS semantics.",
+    "RESISTANCE remains a single field until its exact structured format is finalized.",
+    "SOUND_NAME is the regular mob sound reference; SOUND_DEATH_NAME is the death sound reference."
   ]
 }
