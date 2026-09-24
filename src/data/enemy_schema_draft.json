@@ -3,11 +3,11 @@
   "version": "0.0.1",
   "columns": [
     "NAME",
-    "mob_ID",
+    "MOB_ID",
     "CATEGORY",
     "TAG_1",
     "TAG_2",
-    "TAG_§",
+    "TAG_3",
     "SPAWN_LOCATION_1",
     "SPAWN_LOCATION_2",
     "SPAWN_LOCATION_3",
@@ -19,7 +19,10 @@
     "SOCIAL",
     "BEHAVIOR",
     "ATTACK_STYLE",
+    "ATTACK_STATUS",
+    "ATTACK_STATUS_STACK",
     "BASE_HITPOINTS",
+    "BASE_ARMOR",
     "BASE_DAMAGE",
     "BASE_ATTACK_SPEED",
     "SPECIAL_ATTACK",
@@ -28,11 +31,18 @@
     "IMMUNITY",
     "SPRITE_NAME",
     "ATTACK_SPRITE_NAME",
-    "SOUND_NAME"
+    "SOUND_NAME",
+    "XP_VALUE",
+    "GOLD_VALUE",
+    "GOLD_DROP_CHANCE",
+    "ITEM_DROP_CHANCE",
+    "SOUND",
+    "EFFEKT"
   ],
   "spawn_rule": "Enemies spawn only from matching map locations/anchors defined by SPAWN_LOCATION_1/2/3. Examples: skeletons and zombies at graves/coffins; humans at houses or other suitable human structures.",
   "notes": [
-    "Schema stored exactly as supplied by the user; no column names were silently corrected.",
-    "Open design questions remain for armor, structured status application, reward values and numeric resistance semantics."
+    "Schema stored exactly as supplied by the user.",
+    "Open technical questions: how attack damage type is represented, whether ATTACK_STATUS always applies or needs a chance field, how WAVE is interpreted, and the exact semantics of WEAKNESS/RESISTANCE/IMMUNITY.",
+    "SOUND_NAME and SOUND are both retained because both were supplied and their distinction has not yet been defined."
   ]
 }
