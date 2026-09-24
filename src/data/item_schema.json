@@ -4,6 +4,7 @@
   "columns": [
     "ITEM_NAME",
     "ITEM_ID",
+    "DESCRIPTION",
     "ITEM_SLOT",
     "ITEM_RARITY",
     "SET_ID_1",
@@ -28,7 +29,8 @@
     "KNOCKBACK",
     "BOUNCE",
     "STAT_RISE",
-    "VALUE"
+    "VALUE",
+    "EFFEKT"
   ],
   "equip_rules": {
     "DEFAULT_SLOT_CAPACITY": 1,
@@ -37,27 +39,28 @@
     "SET_ACTIVE_SOURCE": "EQUIPPED_ITEMS_ONLY"
   },
   "rarity": {
-    "MIN": 1,
-    "MAX": 5,
-    "MEANING": "1 = common, 5 = rare",
-    "WEIGHTING": "PENDING_RARITY_MASTER"
+    "TYPE": "ENUM",
+    "MASTER_STATUS": "PENDING_RARITY_MASTER",
+    "CURRENTLY_USED_VALUES": ["COMMON", "SEMI_RARE", "RARE", "EPIC"]
   },
   "rules": [
     "This is the complete canonical item schema for version 0.0.1.",
-    "Do not add extra item or weapon columns unless explicitly approved in a future chat.",
-    "Fields that are not relevant to an item remain empty/null.",
+    "Do not add extra item columns unless explicitly approved in a future chat.",
+    "Fields that are not relevant to an item remain empty/null or use NONE where the relevant enum explicitly uses NONE.",
     "An item may belong to up to three sets through SET_ID_1, SET_ID_2 and SET_ID_3.",
     "Only equipped items count toward set activation. Backpack or otherwise unequipped items do not activate set parts.",
     "An equipped item counts as one active part for each set listed on that item.",
     "By default each non-WEAPON item slot can equip one item and the WEAPON slot can equip two items.",
     "Hero abilities and other explicitly defined mechanics may override the default slot capacities.",
     "ITEM_SLOT defines where an item is equipped, not whether the item can attack.",
-    "Every item slot may contain attack data. Examples include a spiked shield or clawed gloves.",
+    "Every item slot may contain attack data.",
     "Any item with attack data may use WEAPON_TYPE, ATTACK_PATTERN and the other attack fields regardless of ITEM_SLOT.",
     "Items may use up to two separate damage components through DAMAGE_TYPE_1/2 and DAMAGE_VALUE_1/2.",
     "Status application is represented by STATUS_ID, STATUS_STACKS and STATUS_CHANCE.",
     "Attack behavior is represented by WEAPON_TYPE, ATTACK_PATTERN, BASE_ITEM_ATTACK_SPEED, PROJECTILE_SPEED, BASE_ITEM_PROJECTILE_AMOUNT, BASE_ITEM_AOE_SIZE, KNOCKBACK and BOUNCE.",
-    "STAT_RISE and VALUE represent an item's general stat increase and allow any item to provide a direct stat bonus.",
-    "ITEM_RARITY ranges from 1 to 5. Exact rarity weighting and distribution are intentionally undefined until the rarity master is provided."
+    "STAT_RISE and VALUE represent a direct player-stat change granted by the item.",
+    "DESCRIPTION stores player-facing descriptive text.",
+    "EFFEKT stores item-specific effects that are not represented by the structured attack, status or stat fields.",
+    "Exact rarity values, ordering, weighting and distribution remain pending the dedicated rarity master."
   ]
 }
