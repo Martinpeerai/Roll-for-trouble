@@ -1,0 +1,35 @@
+{
+  "status": "DRAFT",
+  "version": "0.0.1",
+  "map": "MAP_1_VILLAGE",
+  "enemy_pool": [
+    "Ratte",
+    "Wolf",
+    "Wildschwein",
+    "Bär",
+    "Huhn",
+    "Kuh",
+    "Kröte",
+    "Spinnenmatriarchin",
+    "Spinne",
+    "Giftspinne",
+    "Bauer",
+    "Magd",
+    "Holzfeller",
+    "Jäger",
+    "Goblin",
+    "Goblin Plünderer",
+    "Skelett",
+    "Dorfschläger",
+    "Miliz Wachmann",
+    "Miliz Bogenschütze",
+    "Miliz Hauptmann",
+    "Miliz Elite",
+    "Hexe",
+    "Dorfältester"
+  ],
+  "notes": [
+    "User supplied 25 rows; Kröte appeared twice. Stored once in the unique enemy pool.",
+    "Enemy stats and spawn locations are still to be defined in the enemy master."
+  ]
+}
