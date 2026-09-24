@@ -1,0 +1,65 @@
+{
+  "status": "DRAFT",
+  "version": "0.0.1",
+  "columns": [
+    "ENEMY_CATEORGY_NAME",
+    "ENEMY_CATEORGY_ID",
+    "ENEMY_CATEORGY_BEHAVIOR"
+  ],
+  "categories": [
+    {
+      "ENEMY_CATEORGY_NAME": "Caster",
+      "ENEMY_CATEORGY_ID": "CATEGORY_CASTER",
+      "ENEMY_CATEORGY_BEHAVIOR": "Umkreist Spieler auf Entfernung und wirkt Zauber"
+    },
+    {
+      "ENEMY_CATEORGY_NAME": "Anstürmer",
+      "ENEMY_CATEORGY_ID": "CATEGORY_CHARGE",
+      "ENEMY_CATEORGY_BEHAVIOR": "Anstrumangriff. Kündigt Ansturm an"
+    },
+    {
+      "ENEMY_CATEORGY_NAME": "Tank",
+      "ENEMY_CATEORGY_ID": "CATEGORY_TANK",
+      "ENEMY_CATEORGY_BEHAVIOR": "Viel Leben"
+    },
+    {
+      "ENEMY_CATEORGY_NAME": "Kontrollierer",
+      "ENEMY_CATEORGY_ID": "CATEGORY_CONTROL",
+      "ENEMY_CATEORGY_BEHAVIOR": "Stunn, Root, Soaked, Blind"
+    },
+    {
+      "ENEMY_CATEORGY_NAME": "Fernkämpfer",
+      "ENEMY_CATEORGY_ID": "CATEGORY_DISTANCE",
+      "ENEMY_CATEORGY_BEHAVIOR": "Hält Entfernung und schießt"
+    },
+    {
+      "ENEMY_CATEORGY_NAME": "Unterstüzer",
+      "ENEMY_CATEORGY_ID": "CATEGORY_SUPPORT",
+      "ENEMY_CATEORGY_BEHAVIOR": "Heilt oder Bufft Mobs"
+    },
+    {
+      "ENEMY_CATEORGY_NAME": "Beschwörer",
+      "ENEMY_CATEORGY_ID": "CATEGORY_SUMMON",
+      "ENEMY_CATEORGY_BEHAVIOR": "Beschwört andere Mobs"
+    },
+    {
+      "ENEMY_CATEORGY_NAME": "Boss",
+      "ENEMY_CATEORGY_ID": "CATEGORY_BOSS",
+      "ENEMY_CATEORGY_BEHAVIOR": "Welle 20"
+    },
+    {
+      "ENEMY_CATEORGY_NAME": "Miniboss",
+      "ENEMY_CATEORGY_ID": "CATEGORY_MINI_BOSS",
+      "ENEMY_CATEORGY_BEHAVIOR": "Welle 10"
+    },
+    {
+      "ENEMY_CATEORGY_NAME": "Elite",
+      "ENEMY_CATEORGY_ID": "CATEGORY_ELITE",
+      "ENEMY_CATEORGY_BEHAVIOR": "Wellenende"
+    }
+  ],
+  "notes": [
+    "Stored exactly as supplied by the user; spelling has not been silently corrected.",
+    "Boss, Miniboss and Elite may function more like rank/spawn roles than behavior roles, but remain in CATEGORY until the user decides otherwise."
+  ]
+}
