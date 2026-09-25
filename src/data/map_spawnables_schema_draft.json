@@ -1,0 +1,55 @@
+{
+  "status": "DRAFT",
+  "version": "0.0.1",
+  "purpose": "Defines entities that are placed on top of the generated base map and are not enemies spawned by the wave system.",
+  "categories": [
+    "NPC",
+    "CONTAINER",
+    "DESTRUCTIBLE",
+    "HAZARD",
+    "INTERACTABLE",
+    "ENVIRONMENT"
+  ],
+  "examples": {
+    "NPC": ["villager", "merchant", "quest_giver"],
+    "CONTAINER": ["barrel", "crate", "chest"],
+    "DESTRUCTIBLE": ["breakable_barrel", "breakable_crate"],
+    "HAZARD": ["trap", "thorn_bush", "poison_patch"],
+    "INTERACTABLE": ["shrine", "well", "campfire"],
+    "ENVIRONMENT": ["movable_or_reactive_map_prop"]
+  },
+  "columns": [
+    "NAME",
+    "ENTITY_ID",
+    "CATEGORY",
+    "TAG_1",
+    "TAG_2",
+    "TAG_3",
+    "SPAWN_LOCATION_1",
+    "SPAWN_LOCATION_2",
+    "SPAWN_LOCATION_3",
+    "SPAWN_WEIGHT",
+    "MIN_AMOUNT",
+    "MAX_AMOUNT",
+    "COLLISION",
+    "DESTRUCTIBLE",
+    "BASE_HITPOINTS",
+    "INTERACTION_TYPE",
+    "LOOT_TABLE_ID",
+    "DAMAGE",
+    "DAMAGE_TYPE",
+    "STATUS_ID",
+    "STATUS_CHANCE",
+    "STATUS_STACKS",
+    "DURATION_TICKS",
+    "SPRITE_NAME",
+    "SOUND_NAME",
+    "EFFEKT"
+  ],
+  "rules": [
+    "These entities are generated as a separate layer after the base map geometry and map assets exist.",
+    "They use SPAWN_LOCATION anchors in the same way as enemies, but are not selected by the enemy wave budget.",
+    "NPCs, containers, hazards and interactables may all have different placement and interaction rules while sharing one spawnable master structure.",
+    "Enemy wave spawning is handled separately and should be defined only after this map-spawned entity layer is specified."
+  ]
+}
