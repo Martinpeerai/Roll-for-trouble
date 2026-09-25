@@ -28,7 +28,7 @@
     "DAMAGE_TYPE",
     "BASE_ATTACK_SPEED",
     "SPECIAL_ATTACK",
-    "STATUS_ID",
+    "RESISTANCE_TYPE",
     "RESISTANCE",
     "SPRITE_NAME",
     "ATTACK_SPRITE_NAME",
@@ -40,14 +40,14 @@
     "SOUND_DEATH_NAME",
     "EFFEKT"
   ],
-  "spawn_rule": "Enemies spawn only from matching map locations/anchors defined by SPAWN_LOCATION_1/2/3. Examples: skeletons and zombies at graves/coffins; humans at houses or other suitable human structures.",
+  "spawn_rule": "Enemies spawn only from matching map locations/anchors defined by SPAWN_LOCATION_1/2/3. Examples: skeletons at graves/coffins; humans at houses or other suitable human structures.",
   "notes": [
-    "Schema stored exactly as supplied by the user.",
-    "WAVE is intended to represent the first wave from which the mob can enter the spawn pool unless a later rule overrides this.",
+    "Schema synced to the user's latest supplied enemy table.",
+    "WAVE represents the first wave from which the mob can enter the spawn pool unless a later rule overrides this.",
     "BASE_DAMAGE together with DAMAGE_TYPE defines the normal attack's base damage component.",
     "ATTACK_STATUS, STATUS_CHANCE and ATTACK_STATUS_STACK define status application by the normal attack.",
-    "STATUS_ID is currently reserved for status data associated with SPECIAL_ATTACK so it does not duplicate ATTACK_STATUS semantics.",
-    "RESISTANCE remains a single field until its exact structured format is finalized.",
-    "SOUND_NAME is the regular mob sound reference; SOUND_DEATH_NAME is the death sound reference."
+    "RESISTANCE_TYPE identifies the affected damage type and RESISTANCE stores its percentage value, e.g. FIRE + 50 means 50 percent fire resistance.",
+    "SOUND_NAME is the regular mob sound reference; SOUND_DEATH_NAME is the death sound reference.",
+    "EFFEKT is reserved exclusively for an ON-DEATH effect triggered when the mob dies. Most mobs may leave it empty/NONE. Example: a poison spider can create a poison cloud on death that persists for X ticks. Normal combat behavior and living abilities do not belong in EFFEKT."
   ]
 }
